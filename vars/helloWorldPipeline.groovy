@@ -4,7 +4,7 @@ def call(Map pipelineParams) {
         stages {
             stage('hello') {
                 steps {
-                    echo 'Hello There!' 
+                    helloWorld(name: "${pipelineParams.name}", dayOfWeek: "${pipelineParams.dayOfWeek}")
                 }
             }
         }
